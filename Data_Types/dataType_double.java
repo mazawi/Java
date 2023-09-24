@@ -3,7 +3,7 @@ package Data_Types;
 public class dataType_double {
     public static void main(String[] args) {
         double a = 1.5;
-        double b = 2.4;
+        double b = 2.4 ;
         double sum  = a + b;
         double mul = a * b;
         double div = a / b;
