@@ -1,6 +1,7 @@
 package Data_Types;
 // change test
-public class dataType_char {
+public class dataType_char 
+{
         public static void main(String[] args) { 
             char x;
             x = 'a';
