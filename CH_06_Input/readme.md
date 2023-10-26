@@ -32,3 +32,7 @@ scanner.close();
 * You can handle exceptions, such as InputMismatchException or NoSuchElementException, when dealing with input to ensure your program doesn't crash due to unexpected input.
 
 * When reading from files or other sources, you'll use different classes, such as FileInputStream and BufferedReader, to handle input.
+
+## Exercises
+### Ex1:
+Write a programme that reads two numbers and finds the sume of these numbers
