@@ -10,5 +10,4 @@ public class Scanner_Ex1
             int x = input.nextInt();
             System.out.println("You have entered: "+ x);
 
-        }   
-}
+        }
