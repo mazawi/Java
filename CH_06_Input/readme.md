@@ -36,3 +36,4 @@ scanner.close();
 ## Exercises
 ### Ex1:
 Write a programme that reads two numbers and finds the sume of these numbers
+[Ex1](https://github.com/mazawi/Teaching-Java/blob/main/CH_06_Input/Ex1.java)
