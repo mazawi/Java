@@ -5,16 +5,19 @@ class Rectangle
     double length;
     double width;
 
-    public Rectangle(double length, double width) {
+    public Rectangle(double length, double width) 
+    {
         this.length = length;
         this.width = width;
     }
 
-    public double calculateArea() {
+    public double calculateArea() 
+    {
         return length * width;
     }
 
-    public double calculateCircumference() {
+    public double calculateCircumference() 
+    {
         return 2 * (length + width);
     }
 
