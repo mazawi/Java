@@ -66,9 +66,14 @@ Which flow of control involves repeating operations for multiple data values?
 
 # Problems
 **Problem 1: Write the pseudo code and draw the flowchart for a programme that reads and calculates the Sum of Two Numbers**
+
 **Problem 2: Write the pseudo code and draw the flowchart for a programme that reads and swaps Two Numbers**
+
 **Problem 3: Write the pseudo code and draw the flowchart for a programme that reads and converts Celsius to Fahrenheit**
+
 **Problem 4: Write the pseudo code and draw the flowchart for a programme that reads and Converts Mile to KM**
+
 **Problem 5: Write the pseudo code and draw the flowchart for a programme that reads the sides of a rectangle and finds the area and circumference**
+
 **Problem 6: Write the pseudo code and draw the flowchart for a programme that reads the sides of a right angle triangle and finds the area and circumference**
 
