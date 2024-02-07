@@ -289,6 +289,112 @@ double data type:
 double taxRate = .05;
 float salesTax = taxRate;
 ```
+## String Literals
+ - String is a class, not a basic data type; String variables are objects
+ - String literal: text contained within double quotes
+**Examples** 
+```
+"Hello"
+"Hello world"
+"The value of x is "
+```
+### String Concatenation Operator (+)
+ - Combines String literals with other data types for printing
+**Example**
+```
+String word1 = "Hello";
+String word2 = "there!";
+String greeting = word1 + ' ' + word2;
+System.out.println( greeting );
+```
+**output is:**
+```
+Hello there!
+```
+**Important**
+ - String literals must start and end on the same line. This statement:
+```
+System.out.println( "Never pass a water
+fountain without taking a drink" );
+```
+generates these compiler errors:
+```
+unclosed string literal
+')' expected
+```
+ - Break long Strings into shorter Strings and use the concatenation operator:
+```
+System.out.println( "Never pass a water "
+                    + "fountain without taking a drink" );
+ ```
+ ### Escape Sequences
+ - To include a special character in a String, use an escape sequence
+ Escape 
+ 
+| Character  | Sequence |
+|--|--|
+| Newline   | \n |
+|Tab|  \t|
+|Double quotes|  \"|
+|Single quote| \'|
+|Backslash| \\|
+|Backspace| \b|
+|Carriage return | \r|
+|Form feed | \f|
+ - Declare a variable only once
+ - After a variable is declared, its data type cannot be changed.
+ - These statements:
+```
+double twoCents;
+double twoCents = .02;
+```
+**generate this compiler error:**
+`twoCents is already defined`
+ - After a variable is declared, its data type cannot be changed.
+ - These statements:
+```
+double cashInHand;
+int  cashInHand;
+```
+**generate this compiler error:**
+`cashInHand is already defined`
+ - The value of a constant cannot change during program execution
+*Syntax:*
+`final  dataType  constantIdentifier =assignedValue;`
+ - Note: assigning a value when the constant is declared is optional. However, a value must be assigned before the constant is used.
+ - Declare as a constant any data that should not change during program execution
+ - Use all capital letters for constants and separate words with an underscore:
+**Example:**
+`final double TAX_RATE = .05;`
+ - Declare constants at the top of the program so their values can easily be seen
+## Expressions and Arithmetic Operators
+ - The Assignment Operator and Expressions
+- Arithmetic Operators
+- Operator Precedence
+- Integer Division and Modulus
+- Division by Zero
+- Mixed-Type Arithmetic and Type Casting
+- Shortcut Operators
+### Assignment Operator
+*Syntax:*
+`target = expression;`
+- expression: operators and operands that evaluate to a single value
+-- value is then assigned to target
+-- target must be a variable (or constant)
+-- value must be compatible with target's data type
+**Examples**
+```
+int  numPlayers = 10; // numPlayers holds 10
+numPlayers = 8;  // numPlayers now holds 8
+int  legalAge = 18;
+int  voterAge = legalAge;
+```
+**The next statement is illegal**
+```
+int height = weight * 2; // weight is not defined
+int weight = 20;
+```
+- and generates the following compiler error: `cannot find symbol`
 
 
 
