@@ -180,7 +180,7 @@ public static void main( String [ ] args )
 ![image](https://github.com/mazawi/Teaching-Java/assets/45329653/08492313-d601-45db-ae74-39e1207250d5)
 
 ### Example declarations: 
-  ```
+  ```c
   int testGrade;
   int numPlayers, highScore, diceRoll;
   short xCoordinate, yCoordinate;
@@ -190,7 +190,7 @@ public static void main( String [ ] args )
 ## Floating-Point Data Types
 ![image](https://github.com/mazawi/Teaching-Java/assets/45329653/7c55dd2e-9c45-43cd-b014-a8f5b66f52f9)
 ### Example declarations: 
-    ```
+    ```c
     float salesTax;
     double interestRate;
     double paycheck, sumSalaries;
@@ -198,7 +198,7 @@ public static void main( String [ ] args )
 ## char Data Type
 ![image](https://github.com/mazawi/Teaching-Java/assets/45329653/2168d085-39a6-48b0-a7a6-6d56cf611bef)
 ### Example declarations: 
-```
+```c
  char finalGrade;
  char newline, tab, doubleQuotes;  
 ```
@@ -216,14 +216,14 @@ public static void main( String [ ] args )
 - Value on the right of the operator is assigned to the variable on the left
 - Value on the right can be a literal (text representing a specific value), another variable, or an expression (a valid combination of variables, operators, and constants -- explained in detail later)
 ### Examples:
-```
+```c
    x = 20;
    y = x;
 ```
 
 ### Syntax for assigning initial values to variables:
 
-```
+```c
  dataType variableName = initialValue;
  ```
 or
@@ -231,7 +231,7 @@ or
  dataType variable1 = initialValue1, variable2 = initialValue2, …;
  ```
 ### Examples:
-```
+```c
    int age = 19;
    double taxRate = .20, salesTax = .06;
 ```
@@ -279,12 +279,12 @@ A variable of any type in right column can be assigned to a variable of any type
 |char|  char|
 **Examples:**
 - This is a valid assignment:
-```
+```c
 float salesTax = .05f;
 double taxRate = salesTax;
 ```
 - This is invalid because the float data type is lower in precision than the `
-```
+```c
 double data type:
 double taxRate = .05;
 float salesTax = taxRate;
@@ -301,7 +301,7 @@ float salesTax = taxRate;
 ### String Concatenation Operator (+)
  - Combines String literals with other data types for printing
 **Example**
-```
+```c
 String word1 = "Hello";
 String word2 = "there!";
 String greeting = word1 + ' ' + word2;
@@ -313,7 +313,7 @@ Hello there!
 ```
 **Important**
  - String literals must start and end on the same line. This statement:
-```
+```c
 System.out.println( "Never pass a water
 fountain without taking a drink" );
 ```
@@ -344,7 +344,7 @@ System.out.println( "Never pass a water "
  - Declare a variable only once
  - After a variable is declared, its data type cannot be changed.
  - These statements:
-```
+```c
 double twoCents;
 double twoCents = .02;
 ```
@@ -352,7 +352,7 @@ double twoCents = .02;
 `twoCents is already defined`
  - After a variable is declared, its data type cannot be changed.
  - These statements:
-```
+```c
 double cashInHand;
 int  cashInHand;
 ```
@@ -383,7 +383,7 @@ int  cashInHand;
 -- target must be a variable (or constant)
 -- value must be compatible with target's data type
 **Examples**
-```
+```c
 int  numPlayers = 10; // numPlayers holds 10
 numPlayers = 8;  // numPlayers now holds 8
 int  legalAge = 18;
@@ -395,6 +395,135 @@ int height = weight * 2; // weight is not defined
 int weight = 20;
 ```
 - and generates the following compiler error: `cannot find symbol`
+
+## Arithmetic Operators
+|Operator|Operation  |
+|--|--|
+| `+`| addition|
+|`-` | subtraction|
+|`*`| multiplication|
+|`/`|division|
+|`%`|modulus (remainder after division)|
+## Operator Precedence
+- If more than one operator is used in an expression the order of evaluation is determined using operator precedence.
+-- Expressions in parentheses are evaluated first
+-- Multiplication, division, and modulus are performed before addition and subtraction
+- When multiple arithmetic operators of the same precedence occur in one expression, they are evaluated left to right.
+- Assignment is performed last, and is performed right to left.
+
+| Operator | Order of evaluation | Operation| 
+|--|--| --|
+| `( )`| left to right|parentheses for explicit grouping|
+|`*  /  %` | left to right| multiplication, division, modulus|
+| `+  -`| left to right| addition, subtraction|
+|`=`| right to left| assignment|
+
+**Example**
+*You have 2 quarters, 3 dimes, and 2 nickels. How many pennies are these coins worth?*
+```c
+int pennies = 2 * 25 + 3 * 10 + 2 * 5;
+```
+**Ans**
+```
+=  50  +  30  +  10
+=  90
+```
+` *` has higher precedence than `+`,  so the multiplications are executed first, then the additions, left to right.
+
+**Example**
+Translate ![image](https://github.com/mazawi/Teaching-Java/assets/45329653/44a5adf3-4d38-4ac6-9c68-6550f9119747) into Java:
+```c
+// This is incorrect!
+double result = x / 2 * y;
+```
+```
+=> x  * y  
+2
+```
+```
+// This is correct
+
+double result = x / ( 2 * y );
+```
+### Integer Division and Modulus
+- When two integers are divided:
+-- the quotient is an integer
+-- any fractional part is truncated (discarded)
+- To get the remainder, use the modulus operator with the same operands
+### Division by Zero
+- Integer division by 0:
+Example: ` int result = 4 / 0;`
+- At run time, the JVM generates an ArithmeticException  and the program stops executing.
+- Floating-point division by 0:
+-- If the dividend is not 0, the result is Infinity
+-- If the dividend and divisor are both 0, the result is NaN  (not a number)
+### Mixed-Type Arithmetic
+- When performing calculations with operands of different data types:
+--Lower-precision operands are promoted to higher-precision data types, then the operation is performed
+- - Promotion is effective only for expression evaluation; not a permanent change
+-- This is called implicit type casting
+- Bottom line: any expression involving a floating-point operand will have a floating-point result.
+#### Rules of Promotion
+The compiler applies the first of these rules that fits:
+1. If either operand is a double, the other operand is converted to a double.
+2. If either operand is a float, the other operand is converted to a float.
+3. If either operand is a  long, the other operand is converted to a long.
+4. If either operand is an int, the other operand is promoted to an  int
+5. If neither operand is a double, float, long, or an int, both operands are promoted to int.
+#### Explicit Type Casting
+*Syntax:*
+***(dataType)( expression )***
+- Note: parentheses around the expression are optional if the expression consists of only one variable
+**Example: calculating a floating-point average of integers**
+```c
+double average = (double)(total) / count;
+```
+## Shortcut Operators
+`++` increment by 1 
+`--` decrement by 1
+
+**Example:**
+
+`count++;  // count = count + 1;`
+
+`count--;  // count = count - 1;`
+
+- Postfix version (`var++`, `var--`):  use value of var  in expression, then increment or decrement.
+- Prefix version (`++var`, `--var`): increment or decrement var, then use value in expression
+
+## Shortcut Arithmetic Operators
+| Operator | Example |Equivalent|
+|--|--|--|
+|  `+=`|`a += 3;`| `a = a + 3;`|
+|`-=`|`a -= 10;`|`a = a - 10;`|
+|`*=`|`a *= 4;`|`a = a * 4;`|
+|`/=`|`a /= 7;`|`a = a / 7;`|
+|`%=`|`a %= 10;`|`a = a % 10;`|
+
+- **No spaces are allowed between the arithmetic operator and the equals sign**
+- Note that the correct sequence is +=, not =+
+
+*Example: add 2 to a*
+```c
+// this is incorrect
+a =+ 2;  // a = +2; assigns 2 to a
+```
+```cpp
+// this is correct
+a += 2;  // a = a + 2;
+```
+### Operator Precedence
+|Operator  |  Order of evaluation|parenthesis for explicit grouping|
+|--|--| --|
+|  `( )`| left - right| parenthesis for explicit grouping|
+|`++ --`| right - left| preincrement, predecrement|
+|`++ --`| right - left|postincrement, postdecrement|
+|`*  /  %`| left - right| multiplication, division, modulus|
+|`+  -`| left - right| addition or String concatenation, subtraction|
+|`= += -= *= /= %=`| right - left| assignment|
+
+
+
 
 
 
