@@ -333,14 +333,14 @@ System.out.println( "Never pass a water "
  
 | Character  | Sequence |
 |--|--|
-| Newline   | \n |
-|Tab|  \t|
-|Double quotes|  \"|
-|Single quote| \'|
+| Newline   | `\n` |
+|Tab|  `\t`|
+|Double quotes|  `\"`|
+|Single quote| `\'`|
 |Backslash| `\\`|
-|Backspace| \b|
-|Carriage return | \r|
-|Form feed | \f|
+|Backspace| `\b`|
+|Carriage return | `\r`|
+|Form feed | `\f`|
  - Declare a variable only once
  - After a variable is declared, its data type cannot be changed.
  - These statements:
