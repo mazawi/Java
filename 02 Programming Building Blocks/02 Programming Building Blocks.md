@@ -150,4 +150,158 @@ public static void main( String [ ] args )
 ```c
   System.out.println( “Hello” ); // print Hello
 ```
+## Data Types, Variables, and Constants
+### Declaring Variables
+* Primitive Data Types
+* Initial Values and Literals
+* String Literals and Escape Sequences
+* Constants
+- For all data, assign a name (identifier) and a data type 
+- Data type tells compiler:
+- How much memory to allocate
+- How to store the data
+- The types of operations you will perform on the data
+- Compiler monitors use of data
+- Java is a strongly typed language
+- Java eight primitive data types
+- byte, short, int, long, float, double, char, boolean
+  
+**Variables hold one value at a time, but that value can change**
+    ``` Syntax:
+      dataType identifier;
+    or
+       dataType identifier1, identifier2, …;
+    ```
+- Naming convention for variable names:
+```first letter is lowercase``` 
+- embedded words begin with uppercase letter
+
+## Integer Types - Whole Numbers
+![image](https://github.com/mazawi/Teaching-Java/assets/45329653/08492313-d601-45db-ae74-39e1207250d5)
+
+### Example declarations: 
+  ```
+  int testGrade;
+  int numPlayers, highScore, diceRoll;
+  short xCoordinate, yCoordinate;
+  byte ageInYears;
+  long cityPopulation;
+```
+## Floating-Point Data Types
+![image](https://github.com/mazawi/Teaching-Java/assets/45329653/7c55dd2e-9c45-43cd-b014-a8f5b66f52f9)
+### Example declarations: 
+    ```
+    float salesTax;
+    double interestRate;
+    double paycheck, sumSalaries;
+    ```
+## char Data Type
+![image](https://github.com/mazawi/Teaching-Java/assets/45329653/2168d085-39a6-48b0-a7a6-6d56cf611bef)
+### Example declarations: 
+```
+ char finalGrade;
+ char newline, tab, doubleQuotes;  
+```
+## boolean Data Type
+![image](https://github.com/mazawi/Teaching-Java/assets/45329653/6f9cd3a4-aa27-45b8-b70f-60e06407fbc6)
+- Used for decision making or as "flag" variables
+
+### Example declarations:
+`
+  boolean isEmpty;
+  boolean passed, failed;
+`
+## Assigning Values to Variables
+### Assignment operator    = 
+- Value on the right of the operator is assigned to the variable on the left
+- Value on the right can be a literal (text representing a specific value), another variable, or an expression (a valid combination of variables, operators, and constants -- explained in detail later)
+### Examples:
+```
+   x = 20;
+   y = x;
+```
+
+### Syntax for assigning initial values to variables:
+
+```
+ dataType variableName = initialValue;
+ ```
+or
+```
+ dataType variable1 = initialValue1, variable2 = initialValue2, …;
+ ```
+### Examples:
+```
+   int age = 19;
+   double taxRate = .20, salesTax = .06;
+```
+## Literals
+### int, short, byte
+- Optional initial sign (+ or -) followed by digits 0 – 9 in any combination 
+### long
+- Optional initial sign (+ or -) followed by digits 0–9 in any combination, terminated with an L or l  
+- Integer literals that begin with 0 are considered to be octal values; Integer literals that begin with 0x are considered to be hexadecimal values.
+
+## Floating-Point Literals
+### float
+- Optional initial sign (+ or -) followed by a floating-point number in fixed or scientific format, terminated by an F or f.
+### double
+- Optional initial sign (+ or -) followed by a floating-point number in fixed or scientific format.
+
+## char and boolean Literals
+### char
+- Any printable character enclosed in single quotes
+- A decimal value from 0 – 65535
+- '\m' , where \m is an escape sequence. For example, '\n' represents a newline, and '\t' represents a tab character.
+### boolean
+- true or false
+
+## Assigning the Values of Other Variables
+*Syntax:*
+
+`dataType variable2 = variable1;`
+
+ - Rules:
+1. variable1 needs to be defined before this statement appears in the source code
+2.  variable1 and variable2 need to be compatible data types; in other words, the precision of variable1 must be lower than or equal to that of variable2
+
+## Compatible Data Types
+A variable of any type in right column can be assigned to a variable of any type in left column:
+| Data Type | Compatible Data Types |
+|--|--|
+| byte |byte  |
+|short | byte, short|
+|int  |byte, short, int, char|
+|long  |byte, short, int, long, char|
+|float|  float, byte, short, int, long, char|
+|double | float, double, byte, short, int, long, char|
+|boolean | boolean|
+|char|  char|
+**Examples:**
+- This is a valid assignment:
+```
+float salesTax = .05f;
+double taxRate = salesTax;
+```
+- This is invalid because the float data type is lower in precision than the `
+```
+double data type:
+double taxRate = .05;
+float salesTax = taxRate;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
