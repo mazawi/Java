@@ -197,6 +197,8 @@ The pseudocode for finding the sum of a set of numbers is:
 * The source file must be saved with the same name as the class name with a .java extension.
 * The class name and the source filename must match exactly, including capitalization. 
 # Error Types
+![image](https://github.com/mazawi/Teaching-Java/assets/45329653/5e12d5f9-1abc-4ad9-9dce-430c7607d8f7)
+
 ## Compiler errors
 * Found by the compiler
 * Usually caused by incorrect syntax or spelling
