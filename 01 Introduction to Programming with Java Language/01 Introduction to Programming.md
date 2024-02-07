@@ -146,6 +146,8 @@ It is not embedded in a web browser or part of a web application.
     * Output
  * The order of execution of instructions is called the flow of control 
 ## 1.7 Types of Flow of Control
+![image](https://github.com/mazawi/Teaching-Java/assets/45329653/02b2d060-935c-448b-94c4-89f8f98025b8)
+
 ### 1 Sequential Processing
 Execute instructions in order
 #### Example
