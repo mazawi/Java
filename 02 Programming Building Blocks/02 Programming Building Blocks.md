@@ -337,7 +337,7 @@ System.out.println( "Never pass a water "
 |Tab|  \t|
 |Double quotes|  \"|
 |Single quote| \'|
-|Backslash| \\|
+|Backslash| `\\`|
 |Backspace| \b|
 |Carriage return | \r|
 |Form feed | \f|
