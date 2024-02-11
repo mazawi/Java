@@ -177,3 +177,127 @@ greetUser("XYZ");
 - Increase flexibility by enabling methods to adapt to various scenarios based on provided parameters.
 
 
+## Types of Methods
+1.	Does not take parameters and does not return values
+2.	Takes arguments and does not return values
+3.	Does not take arguments and returns values
+4.	Takes arguments and returns values
+
+### Type 1 Method (Function): 
+This method does not take any arguments and does not return any values when it is called. 
+![image](https://user-images.githubusercontent.com/45329653/230844418-2f86f012-f4fc-4c01-8f14-e009330cc276.png)
+
+ 
+Ex01: Write a method that prints a welcome message to the screen when it is called
+
+```C++
+public  class Ex01
+{
+	public  static  void SayHi()
+	{
+	System.out.println("Hi, Welcome!");
+	}
+
+public  static  void main(String[] args)
+	{
+	SayHi();
+	}
+}
+```
+Execution
+```C++
+Hi, Welcome!
+```
+
+### Type 2 Method (Function): 
+This function takes arguments and does not return any values when it is called. 
+ 
+![image](https://user-images.githubusercontent.com/45329653/230844650-4a2b5d93-b332-4260-b1f7-29f996ff8b7e.png)
+
+Ex02: Write a Method that receives an integer and prints it
+
+```java
+public class IntegerPrinter 
+{
+    // Function to receive an integer and print it
+    public static void printInteger(int number) 
+    {
+        System.out.println("The integer is: " + number);
+    }
+
+    // Main method to call the printInteger function
+    public static void main(String[] args) 
+    {
+        // Calling the printInteger function with an integer parameter
+        printInteger(10);
+    }
+}
+```
+
+###  Type 3 Method (Function): 
+This method does not take arguments and returns values when it is called. 
+ ![image](https://user-images.githubusercontent.com/45329653/230844779-86d3698f-231b-4220-8d6f-b4f4131ed49a.png)
+
+Ex03:  A method that reads an integer and returns it 
+
+```C++
+import java.util.Scanner;
+public  class Ex02
+{
+	public  static  int readInteger()
+	{
+	Scanner scanner = new Scanner(System.in);
+	System.out.print("Enter an integer: ");
+	int number = scanner.nextInt();
+	return number;
+	}
+
+	public  static  void main(String[] args)
+	{
+	int userInput = readInteger();
+	System.out.println("The entered integer is: " + userInput);
+	}
+}
+```
+Execution
+```C++
+Enter an integer: 12
+The entered integer is: 12
+```
+
+### Type 4 Method (Function): 
+This function takes arguments and returns values when it is called. 
+ ![image](https://user-images.githubusercontent.com/45329653/230844847-615797cc-6fca-4b51-9d12-702676d5323a.png)
+
+Ex04: Write a method that receives two numbers and returns their sum
+
+```java
+public  class Ex04
+{
+	public  static  int sum(int num1, int num2)
+	{
+	return num1 + num2;
+	}
+
+	public  static  void main(String[] args) 
+	{
+	int s = sum(5, 3);
+	System.out.println("The sum of the two numbers is: " + s);
+	}
+}
+```
+
+
+## Exercises
+1.	Write a Method to find the Max of three numbers
+2.	Write a Method to calculate the factorial of a number
+3.	Write a Method that takes a number and checkswhether  the number is prime or not
+4.	Write a Method to print the even numbers in a given range
+5.	Write a Method that takes the GPA of a student and returns the Grade (fail, sat, good, very good, or excellent)
+6.	Write a Method that takes the population and the increase rate of a specific country and the number of years and returns the population after the specified number of years.
+7.	Write a Method that takes the width and the height of a rectangle and returns the area and perimeter
+8.	Write a Method that takes the name of the bank customer and the balance he/she has in his account and prints them. 
+9.	Write a Method to determine the maximum of two integers x and y. 
+10.	Write a Method that returns true if the given number n is odd, otherwise, it must return false. Use the Method in the main Method to test whether a number is even or not.
+11.	Write a Method that returns the power of a number e.g.,  x^y   
+12.	Write a programme that has a function for each arithmetic operation (+, -, *, /). The programme asks the user to enter two integers and the operation the user wants to apply and print the result
