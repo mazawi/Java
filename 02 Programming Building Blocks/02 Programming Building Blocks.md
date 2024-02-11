@@ -207,14 +207,23 @@ public static void main( String [ ] args )
     double paycheck, sumSalaries;
     ```
 ## char Data Type
-![image](https://github.com/mazawi/Teaching-Java/assets/45329653/2168d085-39a6-48b0-a7a6-6d56cf611bef)
+
+| Type | Size in Bytes |Minimum Value| Maximum Value|
+|--|--|--|--|
+|char| 2  |character encoded as 0 | character encoded as FFFF|
+
+
 ### Example declarations: 
 ```c
  char finalGrade;
  char newline, tab, doubleQuotes;  
 ```
 ## boolean Data Type
-![image](https://github.com/mazawi/Teaching-Java/assets/45329653/6f9cd3a4-aa27-45b8-b70f-60e06407fbc6)
+
+Two values only: 
+ true
+ false
+
 - Used for decision making or as "flag" variables
 
 ### Example declarations:
