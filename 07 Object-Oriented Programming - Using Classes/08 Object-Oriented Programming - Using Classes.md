@@ -22,6 +22,7 @@
 - Object name: student1
 - Data: Aisha, 1, 3.5
 <img width="270" alt="image" src="https://github.com/mazawi/Teaching-Java/assets/45329653/7432fa1e-4859-4223-b399-8f91dd470467">
+
 ## Objects
 - In OOP, an object embodies two attributes: 
 	- states and 
@@ -68,6 +69,26 @@ The class's fields and methods
 - It limits direct access to critical data, ensuring its protection.
 - A prime illustration of encapsulation is demonstrated by creating a class with private data members and public methods for access via objects.
 - In such instances, only methods possess the capability to access these private data members.
+
+## Code Reusability 
+- Object-Oriented Programming (OOP) promotes code reusability.
+- Reusable code can be encapsulated within classes and objects.
+- Inheritance facilitates code reuse by allowing subclasses to inherit attributes and methods from superclasses.
+- Polymorphism enables the use of a single interface to represent multiple types, enhancing code reuse.
+- Design patterns offer standardised solutions to common design problems, fostering code reuse across projects.
+- Libraries and frameworks provide pre-written code modules that can be reused in various projects, enhancing productivity and code reuse in OOP.
+- Class code is already written and tested
+- you build a new application faster
+- the application will be more reliable
+
+**Example: A Date class could be used in a calendar program, appointment-scheduling program, online shopping program, etc.**
+
+ - Understanding the internal implementation details of a class is not mandatory.
+- Familiarity with the class's Application Programming Interface (API) is crucial.
+- The API documentation specifies:
+  - Object creation procedures.
+  - Available methods and their functionalities.
+  - Guidelines for method invocation.
 
 [Example: Date Class](https://github.com/mazawi/Teaching-Java/tree/main/08%20Object-Oriented%20Programming%20-%20Using%20Classes/Code/Date)
 
@@ -125,4 +146,38 @@ public class Date {
     }
 }
 ```
+## Declaration of an Object Reference
+
+- An object reference holds the address of the object
+- Syntax to declare an object reference:
+```c 
+ClassName  objectReference;
+```
+or
+```c
+ClassName objectRef1, objectRef2…;
+```
+**Example:**
+```c
+SimpleDate d1;
+```
+**Code Example**
+`Date today;'
+## Instantiate an Object
+- Objects must be instantiated before they can be used
+- Call a constructor using the `new` keyword
+- **Constructor**: special method that creates an object and assigns initial values to data
+- Constructor **has the same name** as the class
+- **Syntax**:
+
+`objectReference = new ClassName( arg list );`
+
+- Arg list (argument list) is comma-separated list of initial values to assign to the object data
+
+**Example**
+
+`Date today = new Date(31, 1, 2024);`
+
+`Date nationalDay = new Date(18,11,1970)`
+
 
