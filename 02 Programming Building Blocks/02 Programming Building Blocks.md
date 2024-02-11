@@ -177,7 +177,13 @@ public static void main( String [ ] args )
 - embedded words begin with uppercase letter
 
 ## Integer Types - Whole Numbers
-![image](https://github.com/mazawi/Teaching-Java/assets/45329653/08492313-d601-45db-ae74-39e1207250d5)
+
+| Type | Size in Bytes |Minimum Value| Maximum Value|
+|--|--|--|--|
+|byte| 1 | -128 | 127|
+|short| 2 | -32,768|  32,767|
+|int |4 | -2,147,483,648 | 2,147,483,647|
+|long| 8 | -9,223,372,036,854,775,808|  9,223,372,036,854,775,807|
 
 ### Example declarations: 
   ```c
@@ -188,7 +194,12 @@ public static void main( String [ ] args )
   long cityPopulation;
 ```
 ## Floating-Point Data Types
-![image](https://github.com/mazawi/Teaching-Java/assets/45329653/7c55dd2e-9c45-43cd-b014-a8f5b66f52f9)
+
+| Type | Size in Bytes |Minimum Value| Maximum Value|
+|--|--|--|--|
+|float| 4 | 1.4E-45 | 3.4028235E38|
+|double| 8 |4.9E-324 |1.7976931348623157E308|
+
 ### Example declarations: 
     ```c
     float salesTax;
