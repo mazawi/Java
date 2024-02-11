@@ -1,4 +1,4 @@
-package StudentObj;
+package Student;
 
 // Student class definition
 class Student {
