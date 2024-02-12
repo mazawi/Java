@@ -442,7 +442,10 @@ System.out.println( s );
 # Case Studies
 ### Basic Operations on 2D array
 1- Declaring array
+
 ***Example**
+
+Please refer to [Ex01.java](https://github.com/mazawi/Teaching-Java/blob/main/06%20Multidimensional%20Arrays/Code/Ex01.java)
 The following code defines an array with 5 rows and 5 columns and of type of integer
 ```c
 // Define and initialize a 2D array with numbers
