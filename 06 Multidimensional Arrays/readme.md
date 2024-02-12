@@ -508,7 +508,7 @@ public class Ex01
 
 ### Elements above diagonal, below diagonla, and on the diagonal
 
-Refer to Ex02.java in the Code folder 
+Refer to [Ex02.java](https://github.com/mazawi/Teaching-Java/blob/main/06%20Multidimensional%20Arrays/Code/Ex02.java) in the Code folder 
 
 **1- Elements above diagonal are identified when the row indices is smaller than the column indices**
 
