@@ -1,5 +1,5 @@
-/* Programme to defind a 5X5 array and prints the array */
 
+package Code06;
 public class Ex01 
 {
 
