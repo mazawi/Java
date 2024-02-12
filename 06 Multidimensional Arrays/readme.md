@@ -440,13 +440,14 @@ System.out.println( s );
 
 
 # Case Studies
-### Basic Operations on 2D array
+### Basic Operations on 2D array (Declaration of an array and printing its elements)
 1- Declaring array
 
 ***Example**
 
 Please refer to [Ex01.java](https://github.com/mazawi/Teaching-Java/blob/main/06%20Multidimensional%20Arrays/Code/Ex01.java)
-The following code defines an array with 5 rows and 5 columns and of type of integer
+
+- The following code defines an array with 5 rows and 5 columns and of type of integer
 ```c
 // Define and initialize a 2D array with numbers
         int[][] array2D = 
@@ -458,5 +459,111 @@ The following code defines an array with 5 rows and 5 columns and of type of int
             {21, 22, 23, 24, 25}
         };
 ```
+
+2- Printing the elements of the array
+
+```c
+for (int i = 0; i < 5; i++)  // Rows
+        {
+            for (int j = 0; j < 5; j++) // Columns
+            {
+                System.out.print(array2D[i][j] + "\t"); // process each element
+            }
+            System.out.println(); // Leave a blank line between rows
+        }
+```
+
+- The full programme is given belwo and you can find it in the folder Code by the name of Ex01.java
+
+```c
+/* Programme to defind a 5X5 array and prints the array */
+
+public class Ex01 
+{
+
+    public static void main(String[] args) {
+        // Define and initialize a 2D array with numbers
+        int[][] array2D = 
+        {
+            {1, 2, 3, 4, 5},
+            {6, 7, 8, 9, 10},
+            {11, 12, 13, 14, 15},
+            {16, 17, 18, 19, 20},
+            {21, 22, 23, 24, 25}
+        };
+
+        // Print the 2D array
+        
+        for (int i = 0; i < 5; i++) 
+        {
+            for (int j = 0; j < 5; j++) 
+            {
+                System.out.print(array2D[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+### Elements above diagonal, below diagonla, and on the diagonal
+
+Refer to Ex02.java in the Code folder 
+
+**1- Elements above diagonal are identified when the row indices is smaller than the column indices**
+
+```c
+for (int i = 0; i < 5; i++) 
+        {
+            for (int j = 0; j < 5; j++) 
+            {
+                if (i<j)
+                {
+                    System.out.print(array2D[i][j] + "is above the diagonal");
+
+                }
+                
+            }
+            System.out.println();
+        }
+```
+**2- Elements on the diagonal are identified when the row indices are equal to column indices**
+
+```c
+for (int i = 0; i < 5; i++) 
+        {
+            for (int j = 0; j < 5; j++) 
+            {
+                if (i==j)
+                {
+                    System.out.print(array2D[i][j] + "is on the diagonal");
+
+                }
+                
+            }
+            System.out.println();
+        }
+```
+
+**3- Elements below diagonal are identified when the row indices is larger than the column indices**
+
+```c
+for (int i = 0; i < 5; i++) 
+        {
+            for (int j = 0; j < 5; j++) 
+            {
+                if (i>j)
+                {
+                    System.out.print(array2D[i][j] + "is below the diagonal");
+
+                }
+                
+            }
+            System.out.println();
+        }
+```
+
+
+
 
 
