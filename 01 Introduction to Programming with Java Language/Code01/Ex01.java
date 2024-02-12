@@ -1,4 +1,4 @@
-package Code;
+package Code01;
 // This programme prints a Weclome message on the screen
 
 public class Ex01 
