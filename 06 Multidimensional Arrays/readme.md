@@ -111,6 +111,334 @@ arrayName.length
 arrayName[n].length
 ```
 ## Accessing Two-Dimensional  Array Elements
-|Array element| Syntax |
+
+  |Array element| Syntax |
 |--|--|
 |Row 0, column j|`arrayName[0][j]`|
+|Row i, column j|`arrayName[i][j]`|
+|Last row, column j|`arrayName[arrayName.length – 1][j]`|
+|Last row, last column|`arrayName[arrayName.length – 1][arrayName[arrayName.length -1].length – 1]`|
+|Number of rows|`arrayName.length`|
+|Number of columns in row i |`arrayName[i].length`|
+
+ **Example: Family Cell Bills**
+
+*We want to analyse three months of cell phone bills for a family of four:*
+
+<img width="469" alt="image" src="https://github.com/mazawi/Teaching-Java/assets/45329653/442c7cf2-cacc-48e0-ab24-e558ca0fe2dd">
+
+
+## Aggregate Array Operations
+
+*To process all array elements in row order, we use a nested for loop:*
+
+```java
+for ( int i = 0; i < arrayName.length; i++ )
+	{
+	for ( int j = 0; j < arrayName[i].length; j++ )
+		{
+			// process element arrayName[i][j]
+		}
+	}
+```
+
+- The outer loop processes the rows.
+- The inner loop processes the columns within each row.
+
+
+## Processing a Given Row
+
+- If we want to find the maximum bill for a particular month or the total bills for a month, we need to process just one row.
+- To process just row i, we use this standard form:
+```java
+for ( int j = 0; j < arrayName[i].length; j++ )
+	{
+	// process element arrayName[i][j]
+	}
+```
+## Processing a Given Column
+
+If we want to determine the highest cell bill for one person, we need to process just one column.
+To process just column j, we use this standard form:
+```c
+for ( int i = 0; i < arrayName.length; i++ )
+	{
+	if ( j < arrayName[i].length )
+	// process element arrayName[i][j]
+	}
+```
+
+Note: Because rows have variable lengths, we must verify that the current row has a column j before attempting to process the element.
+
+## Processing One Row at a Time
+
+If we want to determine the total of the cell bills for each month, we need to process all rows, calculating a total at the end of each row.
+
+We use this standard form:
+```c
+for ( int i = 0; i < arrayName.length; i++ )
+	{
+		// initialize processing variables for row i
+		for ( int j = 0; j < arrayName[i].length; j++ )
+		{
+			// process element arrayName[i][j]
+		} // end inner for loop
+	// finish the processing of row i
+	} // end outer for loop
+```
+## Processing a Column at a Time
+
+Suppose we want to store test grades for three courses. Each course has a different number of tests, so each row has a different number of columns:
+```c
+	int [][] grades = { { 89, 75 },
+						{ 84, 76, 92, 96 },
+						{ 80, 88, 95 } };
+```
+
+- First, we need to find the number of columns in the largest row. We use that in our loop condition.
+- Then, before attempting to process the array element, we check whether the given column exists in the current row.
+- We have stored the maximum number of columns in maxNumberOfColumns; the general pattern for processing elements one column at a time is:
+```c
+for ( int j = 0; j < maxNumberOfColumns; j++ )
+	{
+		for ( int i = 0; i < arrayName.length; i++ )
+			{
+				// does column j exist in this row?
+				if ( j < arrayName[i].length )
+				{
+					// process element arrayName[i][j]
+				}
+			}
+		}
+```
+## Other Multidimensional Arrays
+
+If we want to keep track of sales on a per-year, per-week, and per-day basis, we could use a three-dimensional array:
+- 1st dimension:  year
+- 2nd dimension:  week
+- 3rd dimension:  day of the week
+
+**Example**
+
+```c
+// declare a three-dimensional array
+
+double [][][] sales;
+
+// instantiate the array for 10 years, 52 weeks,
+
+//  and 7 days
+
+sales = new double [10][52][7];
+
+// set the value of the first element
+
+sales[0][0][0] = 638.50;
+
+// set the value for year 4, week 22, day 3
+
+sales [4][22][3] = 928.20;
+
+// set the last value in the array
+
+sales [9][51][6] = 1234.90;
+```
+### Structure of an n-Dimensional Array
+
+| Dimension | Array Element |
+|--|--|
+| first|`arrayName[i1]` is an (n-1)-dimensional array|
+|second|`arrayName[i1][i2]` is an (n-2)-dimensional array|
+|k<sup>th</sup>| `arrayName[i1][i2][i3][..][ik]` is an (n-k)-dimensional array|
+|(n-1)<sup>th</sup>|`arrayName[i1][i2][i3][..][in-1]` is a single-dimensional array|
+|n<sup>th</sup>|`arrayName[i1][i2][i3][..][in-1][in]` is an array element|
+
+### General Pattern for Processing a Three-Dimensional Array
+```c
+for ( int i = 0; i < arrayName.length; i++ )
+	{
+	for ( int j = 0; j < arrayName[i].length; j++ )
+		{
+			for ( int k = 0; k < arrayName[i][j].length; k++ )
+			{
+				// process the element arrayName[i][j][k]
+			}
+		}
+	}
+```
+
+### Code to Print the sales Array
+```c
+for ( int i = 0; i < sales.length; i++ )
+	{
+		for ( int j = 0; j < sales[i].length; j++ )
+			{
+				for ( int k = 0; k < sales[i][j].length; k++ )
+					{
+						// print the element at sales[i][j][k]
+						System.out.print( sales[i][j][k] + "\t" );
+					}
+					// skip a line after each week
+					System.out.println( );
+				}
+				// skip a line after each month
+				System.out.println( );
+			}
+```
+## A Four-Dimensional Array
+If we want to keep track of sales on a per-state, per-year, per-week, and per-day basis, we could use a four-dimensional array:
+
+- 1st dimension:  state
+- 2nd dimension:  year
+- 3rd dimension:  week
+- 4th dimension:  day of the week
+```c
+double[][][][] sales = new double [50][10][52][7];
+```
+
+### General Pattern for Processing a Four-Dimensional Array
+
+```c
+for ( int i = 0; i < arrayName.length; i++ )
+	{
+
+	for ( int j = 0; j < arrayName[i].length; j++ )
+
+	{
+
+		for ( int k = 0; k < arrayName[i][j].length; k++ )
+
+		{
+
+			for ( int l = 0; l < arrayName[i][j][k].length; l++ )
+
+			{
+
+				// process element arrayName[i][j][k][l]
+
+			}
+
+		}
+
+	}
+
+}
+```
+
+## The *ArrayList* Class
+
+- Arrays have a fixed size once they have been instantiated.
+- What if we don't know how many elements we will need? For example, 
+-- if we are reading values from a file 
+-- returning search results
+- We could create a very large array, but then we waste space for all unused elements.
+- A better idea is to use an ***ArrayList***, which stores elements of object references and automatically expands its size, as needed.
+- The ArrayList class is in the package: ***java.util***
+- All ArrayList  elements are object references, so  we could have an ArrayList  of Auto objects, Book objects, Strings, etc.
+- To store primitive types in an ArrayList, use the wrapper classes (Integer, Double, Character, Boolean, etc.)
+- The ArrayList  is a generic class. The ArrayList  class has been written so that it can store object references of any type specified by the client.
+
+**Declaring an ArrayList**
+
+*Use this syntax:*
+`ArrayList<E> arrayListName;`
+
+- E is a class name that specifies the type of object references that will be stored in the ArrayList.
+
+**Example:**
+
+`ArrayList<String> listOfStrings;`
+
+`ArrayList<Auto> listOfCars;`
+
+`ArrayList<Integer> listOfInts;`
+
+**ArrayList Constructors**
+
+|Constructor name and argument list||
+|--|--|
+|ArrayList<E> |constructs an ArrayList  object of type E with an initial capacity of 10|
+|ArrayList<E>( int initialCapacity )|constructs an ArrayList  object of type E with the specified initial capacity|
+
+- The capacity of an ArrayList is the total number of elements allocated to the list.
+- The size of an an ArrayList is the number of elements that are used.
+
+**Instantiating an ArrayList**
+
+- This list has a capacity of 10 Astronaut references, but a size of 0.
+```c
+ArrayList<Astronaut> listOfAstronauts =
+
+new ArrayList<Astronaut>( );
+```
+- This list has a capacity of 5 Strings, but a size of 0.
+```
+ArrayList<String> listOfStrings =
+
+new ArrayList<String>( 5 );
+```
+## ArrayList Methods
+
+|Return value  | Method name and argument list |Functionality|
+|--|--|--|
+|boolean| `add( E element)`| appends element to the end of the list|
+|void| `clear( )`  |removes all the elements in the list|
+|int| `size( )`  | returns the number of elements in the list|
+|E| `remove( int index )`|removes the element at the specified index position|
+|E|`get( int index )`|returns the element at the specified index position; the element is not removed from the list.|
+|E|`set( int index, E element )`|replaces the element at the specified index position with the specified element|
+|void| `trimToSize( )`|sets the capacity of the list to its current size|
+
+## Processing Array Lists
+
+**Using a standard for loop:**
+```c
+ClassName  currentObject;
+{
+	for ( int i = 0; i < arrayListName.size( ); i++ )
+	{
+		currentObject = arrayListName.get( i );
+		// process currentObject
+	}
+```
+
+**Example:**
+
+*Auto currentAuto;*
+
+```c
+for ( int i = 0; i < listOfAutos.size( ); i++ )
+	{
+		currentAuto = listOfAutos.get( i );
+		// process currentAuto
+	}
+```
+### The Enhanced for Loop
+
+**Simplifies processing of lists**
+
+The standard form is:
+```c
+for ( ClassName  currentObject : arrayListName )
+{
+// process currentObject
+}
+``
+
+- This enhanced for loop prints all elements of an ArrayList  of Strings named list:
+
+```
+for ( String s : list )
+
+{
+
+System.out.println( s );
+
+}
+```
+
+
+# Case Studies
+
+
+
