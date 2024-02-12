@@ -423,7 +423,7 @@ for ( ClassName  currentObject : arrayListName )
 {
 // process currentObject
 }
-``
+```
 
 - This enhanced for loop prints all elements of an ArrayList  of Strings named list:
 
