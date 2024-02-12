@@ -400,6 +400,7 @@ ClassName  currentObject;
 		currentObject = arrayListName.get( i );
 		// process currentObject
 	}
+}
 ```
 
 **Example:**
