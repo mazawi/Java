@@ -155,8 +155,8 @@ The pseudocode for calculating the sum of two numbers would look like this:
 ```c
 	read first number
 	read second number
-	set total to (first number +second number)
-  output total
+	set total to (first number + second number)
+  	output total
 ```
 ### 2 Method Call
 Jump to code in method, then return
