@@ -367,7 +367,7 @@ or
 import java.text.*;
 ```
 
-**The *String* Class**
+### The *String* Class
 
 Represents a sequence of characters
 
@@ -389,6 +389,7 @@ String empty = new String( );
 `+= ` : shortcut String concatenation operator
 
 **Example:** [String1.java](https://github.com/mazawi/Teaching-Java/blob/main/08%20Object-Oriented%20Programming%20-%20Using%20Classes/Code/Examples/Strings1.java)
+
 ```c
 String s1 = new String( "Hello " );
 String s2 = "there. ";
@@ -401,7 +402,7 @@ s3 += "!";  // s3 is now:  Hello there!
   |--|--|
   |`int` | `length( )` :returns the number of characters in the String|
 
-**Example** [String2.java]
+**Example** [String2.java](https://github.com/mazawi/Teaching-Java/blob/main/08%20Object-Oriented%20Programming%20-%20Using%20Classes/Code/Examples/Strings2.java)
 
 ```c
 String s1 = new String( "Hello " );
@@ -417,7 +418,8 @@ System.out.println(Len);
   |`String`| `toUpperCase( )` : returns a copy of the String will all letters uppercase|
   |`String` |`toLowerCase( )` : returns a copy of the String will all letters lowercase|
 
-**Example:** [Strings2.java]
+**Example:** [Strings2.java](https://github.com/mazawi/Teaching-Java/blob/main/08%20Object-Oriented%20Programming%20-%20Using%20Classes/Code/Examples/Strings2.java)
+
 ```c
 String s1 = new String( "Hello " );
 String s2 = s1.toUpperCase();
@@ -435,7 +437,8 @@ System.out.println("Lower: "+ s3);
 
 **The index of the first character of a String is 0.**
 
-**Example:** [String3.java]
+**Example:** [String3.java](https://github.com/mazawi/Teaching-Java/blob/main/08%20Object-Oriented%20Programming%20-%20Using%20Classes/Code/Examples/Strings2.java)
+
 ```c
 String s1 = new String( "Welcome to Java " );
 int ind1 =s1.indexOf('J');
@@ -452,7 +455,7 @@ System.out.println("The index of (to) is: " + ind2);
   |--|--|
   | `String` | `substring( int startIndex, int endIndex )` : returns a substring of the String object beginning at the character at index startIndex  and ending at the character at index end Index – 1|
 
-**Example:** [String3.java]
+**Example:** [String3.java](https://github.com/mazawi/Teaching-Java/blob/main/08%20Object-Oriented%20Programming%20-%20Using%20Classes/Code/Examples/Strings3.java)
 ```c
 String s1 = new String( "Welcome to Java " );
 String s2 = s1.substring(2, 5);
@@ -461,7 +464,8 @@ System.out.println("The substring between 2 and 5 is: "+s2);
 
 *The value of endOfHello is  “lo”*
 
-**The DecimalFormat  Class**
+### The DecimalFormat  Class
+
 | DecimalFormat Constructor|
 |--|
 |`DecimalFormat( String pattern )` instantiates a  DecimalFormat object with the format specified by pattern|
@@ -495,7 +499,7 @@ To format a numeric value for output, call the format method.
 |--|
 |`Random( )` : Creates a random number generator.|
 
-**Example:**
+**Example:** 
 
 `Random random = new Random( );`
 
@@ -505,11 +509,27 @@ To format a numeric value for output, call the format method.
 |--|--|
 |`int`|`nextInt( int number )` :returns a random integer ranging from 0 up to, but not including, number|
 
-**Example:**
+**Example:** [Random1.java]
 
-To generate a random integer between 1 and 6:
+```c
+package Examples;
 
-`int die = random.nextInt( 6 ) + 1;`
+import java.util.Random;
+public class Random1 
+{
+    public static void main(String[] args) 
+    {
+        Random r = new Random();
+        int x = r.nextInt(); // Random Number
+        System.out.println(x);
+        int die = r.nextInt(6)+1; // Random with range 
+        System.out.println(die);
+        
+    }
+    
+}
+
+```
 
 ### Input Using the Scanner Class
 
