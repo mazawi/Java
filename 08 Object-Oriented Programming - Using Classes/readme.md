@@ -509,7 +509,7 @@ To format a numeric value for output, call the format method.
 |--|--|
 |`int`|`nextInt( int number )` :returns a random integer ranging from 0 up to, but not including, number|
 
-**Example:** [Random1.java]
+**Example:** [Random1.java](https://github.com/mazawi/Teaching-Java/blob/main/08%20Object-Oriented%20Programming%20-%20Using%20Classes/Code/Examples/Random1.java)
 
 ```c
 package Examples;
