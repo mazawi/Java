@@ -218,7 +218,7 @@ SimpleDate  defaultDate = new SimpleDate( );
 	- change values of object data
 
 
-<img width="71" alt="image" src="https://github.com/mazawi/Teaching-Java/assets/45329653/bb442272-dac5-45a6-a900-66480a1ad9b1">
+<img width="398" alt="image" src="https://github.com/mazawi/Teaching-Java/assets/45329653/5bd6c8e1-cd55-440b-a0d5-355af2805bbe">
 
 
 **SimpleDate Accessor Methods**
