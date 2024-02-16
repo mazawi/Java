@@ -922,7 +922,55 @@ public String toString()
 <img width="450" alt="image" src="https://github.com/mazawi/Teaching-Java/assets/45329653/78b1ff34-04d3-4fd0-9cf4-935e3b5f06d9">
 
 
+### Access Modifiers public and private
 
+- **private keyword**
+	- Used for most instance variables
+	- private variables and methods are accessible only to methods of the class in which they are declared
+	- Declaring instance variables private is known as data hiding
+- **public keyword**
+	- Exposes variables or methods outside the Class.
+	- Declaring public methods is know as defining the class’ public interface.
+
+**“this”  keyword**
+
+- **this** can be used to refer current class instance variable.
+- **this** can be used to invoke current class method (implicitly)
+- **this()** can be used to invoke current class constructor.
+
+**Example**
+
+```c
+class Student
+{
+	int  rollno;
+	String name;
+	float fee;
+
+	Student(int  rollno,String  name,float fee)
+	{
+	rollno=rollno;
+	name=name;
+	fee=fee;
+	}
+}
+```
+```c
+class Student
+{
+	int  rollno;
+	String name;
+	float fee;
+
+	Student(int  rollno,String  name,float fee)
+	{
+	this.rollno=rollno;
+	this.name=name;
+	this.fee=fee;
+	}
+}
+
+```
 
 
 
