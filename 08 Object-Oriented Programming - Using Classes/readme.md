@@ -180,4 +180,291 @@ SimpleDate d1;
 
 `Date nationalDay = new Date(18,11,1970)`
 
+## SimpleDate Class API
+**SimpleDate Class Constructors**
+|Constructor| Explanation|
+|--|--|
+|SimpleDate( )| creates a SimpleDate object with initial month, day, and year values of 1, 1, 2000|
+|SimpleDate( int mm, int dd, int yy)| creates a SimpleDate object with initial month, day, and year values of mm, dd, and yy|
+
+**Instantiation Examples**
+```c
+SimpleDate  independenceDay;
+
+independenceDay = new SimpleDate( 7, 4, 1776 );
+
+SimpleDate  graduationDate = new SimpleDate( 5, 15, 2012 );
+
+SimpleDate  defaultDate = new SimpleDate( );
+```
+
+**Objects After Instantiation**
+
+<img width="287" alt="image" src="https://github.com/mazawi/Teaching-Java/assets/45329653/370b1547-69d4-4732-8fcd-fdc3d51e5229">
+
+
+**Calling a Method**
+
+<img width="250" alt="image" src="https://github.com/mazawi/Teaching-Java/assets/45329653/4533feb7-6aaa-46a3-ba86-c6f041202f07">
+
+**Method Classifications**
+
+- Accessor  methods:  
+	- “get” methods
+	- return values of object data
+
+- Mutator  methods
+	- “set” methods
+	- change values of object data
+
+
+<img width="71" alt="image" src="https://github.com/mazawi/Teaching-Java/assets/45329653/bb442272-dac5-45a6-a900-66480a1ad9b1">
+
+
+**SimpleDate Accessor Methods**
+| Return value | Method name and argument list |
+|--|--|
+| `int` | `getMonth( )`   returns the value of month |
+|`int`|`getDay( )`  returns the value of day|
+|`int`| `getYear( )`  returns the value of year|
+
+**SimpleDate Mutator Methods**
+
+| Return value | Method name and argument list |
+|--|--|
+|`void`| `setMonth( int mm )` sets the value of month to mm. If mm is not a valid month, sets month to 1.|
+|`void`| `setDay( int dd )`  sets the value of day to dd. If dd is not a valid day, sets day to 1.|
+|`void`| `setYear( int  yy )` sets the value of year to yy|
+
+**Dot Notation**
+
+- Use when calling a method to specify which object's data the method should use
+
+***Syntax:***
+
+`objectReference.methodName( arg1, arg2, … )`
+
+**Method Return Values**
+
+- Can be a primitive data type, class type, or void
+- A value-returning method
+	- The method returns a value.
+	- Thus the method call is used in an expression.
+	- When the expression is evaluated, the return value of the method replaces the method call.
+- Methods with a void return type 
+	- Have no value 
+	- Method call is complete statement (ends with ;)
+
+**The Argument List in an API**
+
+- Comma-separated pairs of
+`
+dataType  variableName
+`
+
+- The argument list specifies:
+	- The order of the arguments
+	- The data type of each argument
+
+- Arguments can be: 
+	- Any expression that evaluates to the specified data type
+
+**Reading an API: Value-returning Method**
+
+<img width="489" alt="Screenshot 2024-02-16 at 17 36 02" src="https://github.com/mazawi/Teaching-Java/assets/45329653/fda7bbc6-e846-4686-ae4d-e17397dee2a4">
+
+*Example method calls (assuming d1 is a SimpleDate object):*
+
+ `int m = d1.getMonth( );`
+ 
+or
+
+` System.out.println( d1.getMonth( ) );`
+
+**Reading an API: void Method**
+
+
+<img width="576" alt="Screenshot 2024-02-16 at 17 39 24" src="https://github.com/mazawi/Teaching-Java/assets/45329653/901f07e6-52f5-4242-8c5c-bee58a6e2f6b">
+
+*Example method call (assuming d1 is a SimpleDate object):*
+
+` d1.setMonth( 12 );`
+
+**Object Reference vs. Object Data**
+
+- Object references point to the memory location of object data.
+- An object can have multiple object references pointing to it.
+- Or an object can have no object references pointing to it. If so, the garbage collector  will free the object's memory.
+- two object references point to the same object
+
+<img width="414" alt="image" src="https://github.com/mazawi/Teaching-Java/assets/45329653/2ebddca7-bd94-4352-a2be-2776e4ce3e5d">
+
+
+**null Object References**
+
+- An object reference can point to no object. In that case, the object reference has the value null.
+- Object references have the value null when they have been declared, but have not been used to instantiate an object.
+- Attempting to use a null object reference causes a NullPointerException  at run time.
+
+**Using Java Predefined Classes**
+
+- The Java SDK provides more than 2,000 classes that can be used to add functionality to our programs
+- APIs for Java classes are published on Sun Microsystems’ website: www.java.sun.com
+
+	- Java Packages
+	- The String Class
+	- Formatting Output using DecimalFormat
+	- The Random class
+	- Console Input Using the Scanner Class
+	- Using static methods and data
+	- Using System and  the  PrintStream  class
+	- The Math Class
+	- Formatting Output using NumberFormat
+	- The Wrapper Classes
+	- Dialog Boxes
+
+**Java Packages**
+
+- Classes are grouped in packages according to functionality
+- 
+|Package  | Categories of Classes |
+|--|--|
+| `java.lang`|Basic functionality common to many programs, such as the String class and Math class|
+|`java.awt`|Graphics classes for drawing and using colors|
+|`javax.swing`|User-interface components|
+|`java.text`|Classes for formatting numeric output|
+|`java.util`|The Scanner class, the Random class and other miscellaneous classes|
+|`java.io`|Classes for reading from and writing to files|
+
+**Using a Class From a Package**
+
+- Classes in java.lang are automatically available to use.
+- Classes in other packages need to be "imported" using this syntax:
+```c
+import package.ClassName;
+```
+or
+```c
+import package.*;
+```
+- (imports all required classed from package)
+
+**Example**
+```c
+import java.text.DecimalFormat;
+```
+or
+```c
+import java.text.*;
+```
+
+**The *String* Class**
+
+Represents a sequence of characters
+
+|String Constructors|
+|--|
+|`String( String str )` : allocates a String object with the value of str, which is a String object or a String literal|
+|`String( )`  : allocates an empty String object|
+
+**Examples:**
+```c
+String greeting = new String( "Hello" );
+
+String empty = new String( );
+```
+**String Concatenation Operators**
+
+`+` :  appends a String to another String. At  least one operand must be a String.
+
+`+= ` : shortcut String concatenation operator
+
+**Example:**
+```c
+String s1 = new String( "Hello " );
+String s2 = "there. ";
+String s3 = s1 + s2; // s3 is:  Hello there
+String s3 += "!";  // s3 is now:  Hello there!
+```
+**The length Method**
+
+  |Return type| Method name and argument list|
+  |--|--|
+  |`int` | `length( )` :returns the number of characters in the String|
+
+**Example**
+
+```c
+String hello = "Hello";
+int  len = hello.length( );
+```
+*The value of len is 5*
+
+***toUpperCase*  and  *toLowercase* Methods**
+
+|Return type| Method name and argument list|
+  |--|--|
+  |`String`| `toUpperCase( )` : returns a copy of the String will all letters uppercase|
+  |`String` |`toLowerCase( )` : returns a copy of the String will all letters lowercase|
+
+**Example:**
+```c
+String hello = "Hello";
+hello = hello.toUpperCase( );
+```
+**The value of hello is "HELLO"**
+
+**The indexOf Methods**
+
+|Return type| Method name and argument list|
+  |--|--|
+  | 'int`| `indexOf( String searchString )` : returns the index of the first occurrence of searchString, or -1 if not found|
+  |`int` | `indexOf( char searchChar )` : returns the index of the first occurrence of searchChar, or  -1 if not found|
+
+**The index of the first character of a String is 0.**
+
+**Example:**
+```c
+String hello = "Hello";
+
+int index = hello.indexOf( 'e' );
+```
+
+*The value of index is 1.*
+
+**The substring Method**
+
+|Return type| Method name and argument list|
+  |--|--|
+  | `String` | `substring( int startIndex, int endIndex )` : returns a substring of the String object beginning at the character at index startIndex  and ending at the character at index end Index – 1|
+
+**Example:**
+```c
+String hello = "Hello";
+String endOfHello = hello.substring( 3, hello.length( ) );
+```
+
+*The value of endOfHello is  “lo”*
+
+**The DecimalFormat  Class**
+| DecimalFormat Constructor|
+|--|
+|`DecimalFormat( String pattern )` instantiates a  DecimalFormat object with the format specified by pattern|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
