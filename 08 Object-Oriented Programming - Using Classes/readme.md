@@ -388,7 +388,7 @@ String empty = new String( );
 
 `+= ` : shortcut String concatenation operator
 
-**Example:** please check the example 
+**Example:** [String1.java]
 ```c
 String s1 = new String( "Hello " );
 String s2 = "there. ";
@@ -401,13 +401,14 @@ s3 += "!";  // s3 is now:  Hello there!
   |--|--|
   |`int` | `length( )` :returns the number of characters in the String|
 
-**Example**
+**Example** [String2.java]
 
 ```c
-String hello = "Hello";
-int  len = hello.length( );
+String s1 = new String( "Hello " );
+int Len = s1.length();
+System.out.println(Len);
 ```
-*The value of len is 5*
+*The value of len is 6 Beacause of the space after Hello*
 
 ***toUpperCase*  and  *toLowercase* Methods**
 
@@ -416,27 +417,31 @@ int  len = hello.length( );
   |`String`| `toUpperCase( )` : returns a copy of the String will all letters uppercase|
   |`String` |`toLowerCase( )` : returns a copy of the String will all letters lowercase|
 
-**Example:**
+**Example:** [Strings2.java]
 ```c
-String hello = "Hello";
-hello = hello.toUpperCase( );
+String s1 = new String( "Hello " );
+String s2 = s1.toUpperCase();
+String s3 = s1.toLowerCase();
+System.out.println("Upper: "+s2);
+System.out.println("Lower: "+ s3);
 ```
-**The value of hello is "HELLO"**
 
 **The indexOf Methods**
 
 |Return type| Method name and argument list|
   |--|--|
-  | 'int`| `indexOf( String searchString )` : returns the index of the first occurrence of searchString, or -1 if not found|
+  | `int`| `indexOf( String searchString )` : returns the index of the first occurrence of searchString, or -1 if not found|
   |`int` | `indexOf( char searchChar )` : returns the index of the first occurrence of searchChar, or  -1 if not found|
 
 **The index of the first character of a String is 0.**
 
-**Example:**
+**Example:** [String3.java]
 ```c
-String hello = "Hello";
-
-int index = hello.indexOf( 'e' );
+String s1 = new String( "Welcome to Java " );
+int ind1 =s1.indexOf('J');
+System.out.println("The index of (J) is: "+ ind1);
+int ind2 = s1.indexOf("to");
+System.out.println("The index of (to) is: " + ind2);
 ```
 
 *The value of index is 1.*
@@ -447,10 +452,11 @@ int index = hello.indexOf( 'e' );
   |--|--|
   | `String` | `substring( int startIndex, int endIndex )` : returns a substring of the String object beginning at the character at index startIndex  and ending at the character at index end Index – 1|
 
-**Example:**
+**Example:** [String3.java]
 ```c
-String hello = "Hello";
-String endOfHello = hello.substring( 3, hello.length( ) );
+String s1 = new String( "Welcome to Java " );
+String s2 = s1.substring(2, 5);
+System.out.println("The substring between 2 and 5 is: "+s2);
 ```
 
 *The value of endOfHello is  “lo”*
