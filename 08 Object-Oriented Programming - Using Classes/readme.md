@@ -94,57 +94,66 @@ The class's fields and methods
 
 
 ```c
+package Date;
 public class Date {
     private int day;
     private int month;
     private int year;
 
     // Constructor
-    public Date(int day, int month, int year) {
+    public Date(int day, int month, int year) 
+    {
         this.day = day;
         this.month = month;
         this.year = year;
     }
+    public Date() 
+    {
+        this.day = 1;
+        this.month = 1;
+        this.year = 2000;
+    }
 
-    // Getters and setters or Accessors and Mutators
-    public int getDay() {
+    // Getters and setters
+    public int getDay() 
+    {
         return day;
     }
 
-    public void setDay(int day) {
+    public void setDay(int day) 
+    {
         this.day = day;
     }
 
-    public int getMonth() {
+    public int getMonth() 
+    {
         return month;
     }
 
-    public void setMonth(int month) {
+    public void setMonth(int month) 
+    {
         this.month = month;
     }
 
-    public int getYear() {
+    public int getYear() 
+    {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(int year) 
+    {
         this.year = year;
     }
 
     // toString method to display date
+   
     public String toString() {
         return day + "/" + month + "/" + year;
     }
-
-    // Example of usage
-    public static void main(String[] args) {
-        // Creating a Date object
-        Date today = new Date(31, 1, 2024);
-
-        // Displaying the date
-        System.out.println("Today's date is: " + today);
-    }
 }
+
+    
+
 ```
 ## Declaration of an Object Reference
 
@@ -159,10 +168,12 @@ ClassName objectRef1, objectRef2…;
 ```
 **Example:**
 ```c
-SimpleDate d1;
+Date today = new Date(31, 1, 2024);
 ```
 **Code Example**
-`Date today;'
+
+`Date today;`
+
 ## Instantiate an Object
 - Objects must be instantiated before they can be used
 - Call a constructor using the `new` keyword
@@ -176,31 +187,29 @@ SimpleDate d1;
 
 **Example**
 
-`Date today = new Date(31, 1, 2024);`
+```c
+Date today = new Date(31, 1, 2024);
 
-`Date nationalDay = new Date(18,11,1970)`
+Date nationalDay = new Date(18,11,1970)
+```
 
-## SimpleDate Class API
-**SimpleDate Class Constructors**
+## Date Class 
+**Date Class Constructors**
 |Constructor| Explanation|
 |--|--|
-|SimpleDate( )| creates a SimpleDate object with initial month, day, and year values of 1, 1, 2000|
-|SimpleDate( int mm, int dd, int yy)| creates a SimpleDate object with initial month, day, and year values of mm, dd, and yy|
+|Date( )| creates a Date object with initial month, day, and year values of 1, 1, 2000|
+|Date( int mm, int dd, int yy)| creates a Date object with initial month, day, and year values of dd, mm, and yy|
 
 **Instantiation Examples**
 ```c
-SimpleDate  independenceDay;
+Date  nationalDay;
 
-independenceDay = new SimpleDate( 7, 4, 1776 );
+nationalDay = new Date( 18, 11, 1970 );
 
-SimpleDate  graduationDate = new SimpleDate( 5, 15, 2012 );
+Date  graduationDate = new Date( 5, 15, 2025 );
 
 SimpleDate  defaultDate = new SimpleDate( );
 ```
-
-**Objects After Instantiation**
-
-<img width="287" alt="image" src="https://github.com/mazawi/Teaching-Java/assets/45329653/370b1547-69d4-4732-8fcd-fdc3d51e5229">
 
 
 **Calling a Method**
@@ -221,14 +230,14 @@ SimpleDate  defaultDate = new SimpleDate( );
 <img width="398" alt="image" src="https://github.com/mazawi/Teaching-Java/assets/45329653/5bd6c8e1-cd55-440b-a0d5-355af2805bbe">
 
 
-**SimpleDate Accessor Methods**
+**Date Accessor Methods**
 | Return value | Method name and argument list |
 |--|--|
 | `int` | `getMonth( )`   returns the value of month |
 |`int`|`getDay( )`  returns the value of day|
 |`int`| `getYear( )`  returns the value of year|
 
-**SimpleDate Mutator Methods**
+**Date Mutator Methods**
 
 | Return value | Method name and argument list |
 |--|--|
