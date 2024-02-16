@@ -388,7 +388,7 @@ String empty = new String( );
 
 `+= ` : shortcut String concatenation operator
 
-**Example:** [String1.java]
+**Example:** [String1.java](https://github.com/mazawi/Teaching-Java/blob/main/08%20Object-Oriented%20Programming%20-%20Using%20Classes/Code/Examples/Strings1.java)
 ```c
 String s1 = new String( "Hello " );
 String s2 = "there. ";
