@@ -1,16 +1,21 @@
 # Java Programme Structure
 ## Packages
-- if you develop an application that needs more than one classes, it is good practice to create a folder that contains all the classes 
-- The folder which contains all the classes is known as package and all the files which consists the classes should have the following keyword at the top
+- if you develop an application that needs more than one class, it is good practice to create a folder that contains all the classes 
+- The folder which contains all the classes is known as the package and all the files which consist of the classes
+- All files should have the following keyword at the top
+
+![image](https://github.com/mazawi/Teaching-Java/assets/45329653/0535b455-26bb-4d0c-8d53-6e76c7914390)
+
+  
 ```c
 package NAME_OF_THE_FOLDER;
 ```
 
-- To ease the work, write each class in a separate file which have the same class name with .java extention
+- To ease the work, write each class in a separate file which has the same class name with .java extension
 - Remember that the file name should have the same class name, e.g. 
 
 ```c
-// The folloaing class should be saved in file with name Ex01.java
+// The following class should be saved in a file with the name Ex01.java
 
 
 public class Ex01 
@@ -82,7 +87,7 @@ public class MainClass
 }
 
 ```
-
+You can access the folder here-> [Java Application Structure](https://github.com/mazawi/Teaching-Java/tree/main/01.1%20Java%20Applications%20Structure/MyPackage)
 
 
 
