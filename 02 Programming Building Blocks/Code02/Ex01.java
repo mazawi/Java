@@ -1,4 +1,4 @@
-package Code01;
+package Code02;
 
 // This programme prints a Weclome message on the screen
 
