@@ -34,6 +34,9 @@ public class Ex01
         - Class1
         - Class2
         - Class3
+     
+<img width="401" alt="Screenshot 2024-02-18 at 00 48 58" src="https://github.com/mazawi/Teaching-Java/assets/45329653/547c0413-9e57-4940-9581-f7b31f88a891">
+
 
 **Example**
 Construct an application that has a package by the name **MyPackage** which contains 3 classes: **MyClass1**,  **MyClass2**, and **MainClass**
@@ -41,6 +44,44 @@ Construct an application that has a package by the name **MyPackage** which cont
 **IMPORTANT:**
 - **At least one Class should contain the main function (Method)**
 - **Java Programmes start executing from the main function (Method)**
+
+**MyClass1.java code**
+
+```c
+package MyPackage;
+
+public class MyClass1 
+{
+    // Code and methods
+    
+}
+```
+**MyClass2.java code**
+
+```c
+package MyPackage;
+
+public class MyClass2 
+{
+    // Code and methods
+    
+}
+```
+
+**MainClass.java code**
+```c
+package MyPackage;
+
+public class MainClass 
+{
+    public static void main(String[] args) 
+    {
+        // Main Method
+    }
+    
+}
+
+```
 
 
 
