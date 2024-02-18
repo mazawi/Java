@@ -1,4 +1,4 @@
-# Java Programme Structure
+# Java Application Structure
 ## Packages
 - if you develop an application that needs more than one class, it is good practice to create a folder that contains all the classes 
 - The folder which contains all the classes is known as the package and all the files which consist of the classes
