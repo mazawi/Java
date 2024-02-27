@@ -21,7 +21,7 @@ public class Ex06 {
         }
 
         // Print the elements of the new array
-        System.out.println("\nElements of the New Array (created from every second element):");
+        System.out.println("\nElements of the New Array :");
         for (int i = 0; i < originalArray.length; i += 1) 
         {
             System.out.println(newArray[i]);
