@@ -31,3 +31,8 @@
 	- report results  (report total)
 - The flow of control that programmers use to complete jobs with this pattern is called looping, or repetition.
 ### The while Loop
+
+- The while loop is designed for repeating a set of operations on data items when we don't know how many data items there will be.
+- When we reach the end of the items to process, we will get some signal. (For the grocery cashier, it's the divider bar.)
+- The end of data items could be indicated by a special input value called a sentinel value or by reaching the end of a file.
+- Receiving the signal is an event; we call this event-controlled looping.
