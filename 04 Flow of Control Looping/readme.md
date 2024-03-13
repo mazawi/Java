@@ -163,3 +163,89 @@ i++;  // this statement follows the loop
 ```
 - The semicolon indicates an empty loop body;  i++ is never executed because it is not part of the loop body, so the condition is always true.
 
+
+### Example
+- Read integers from the user until the user enters -1. 
+-1 is the sentinel value.
+To process the data, we echo the user input to console.
+
+This is a sentinel-controlled loop. We do not know in advance how many integers the user will enter.
+
+```java
+import java.util.Scanner;
+
+public class Echo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int userInput = 0; 
+        while (userInput != -1) {
+            System.out.print("Enter integers (enter -1 to stop): ");
+            userInput = scanner.nextInt();
+            if (userInput != -1) {
+                System.out.println("You entered: " + userInput);
+            }
+        }
+        System.out.println("Program terminated. Goodbye!");
+        scanner.close();
+    }
+}
+```
+
+## Looping Techniques
+There are standard patterns and techniques for performing common programming operations:
+1. Accumulation
+2. Counting Items
+3. Finding an Average
+4. Finding Maximum or Minimum Values
+5. Animation
+
+### Accumulation
+- Calculating a total of input values
+- Approach: the running total
+    - We start by initializing a total variable to 0
+    - Each time we read a value, we add the value to the total
+    - When we have no more values to read, the total is complete
+- Note that this is the same pattern used by the grocery cashier.
+
+**Accumulation Pseudocode**
+```java
+set total to 0   // very important!
+read a number   // priming read
+while ( number is not the sentinel value )
+{ 
+      add the number to total
+    
+    read the next number // update read
+}
+output the total
+```
+Code
+```Java
+import java.util.Scanner;
+
+public class Accumulation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int total = 0;
+        int userInput=0;
+
+        while (userInput !=-123) {
+            System.out.print("Enter a value (enter 0 to finish): ");
+            userInput = scanner.nextInt();
+            if (userInput !=-123) {        
+            total += userInput;
+            }
+        }
+        System.out.println("Total: " + total);
+        scanner.close();
+    }
+}
+```
+
+
+### Counting Items
+
+- Approach: the running count
+    - We start by initializing a count variable to 0.
+    - Each time we read a value, we check whether that value meets the criteria as something we want to count. If so, we increment the count variable by 1.
+    - When we are finishing reading values, the count is complete.
