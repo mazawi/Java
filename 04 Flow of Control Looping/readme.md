@@ -249,3 +249,78 @@ public class Accumulation {
     - We start by initializing a count variable to 0.
     - Each time we read a value, we check whether that value meets the criteria as something we want to count. If so, we increment the count variable by 1.
     - When we are finishing reading values, the count is complete.
+
+**Counting Items Items Pseudocode**
+```java
+set count to 0  // very important!!
+read input  // priming read
+while ( input is not the sentinel value )
+{
+	if ( input is what we want to count )  add 1 to count
+	read the next input  // update read
+}
+output count
+```
+
+**Example** Write a programme that reads the marks of the students continuously and counts the number of passed students. The programme stops execution if the user enters (-123) and ignores invalid marks
+```java
+import java.util.Scanner;
+
+public class counting 
+{
+    public static void main(String[] args) 
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        int passedCount = 0;
+        int mark = 0;
+
+        while (mark != -123) 
+        {
+            System.out.print("Enter student mark (-123 to stop):  ");
+            mark = scanner.nextInt();
+
+                if (mark >= 0 && mark <= 100) 
+                {
+                    if (mark >= 50) 
+                    {
+                        passedCount++;
+                    }
+                } 
+                else 
+                {
+                    System.out.println("Invalid mark. Please enter a mark between 0 and 100.");
+                }
+            
+        }
+
+        System.out.println("Count of passed students: " + passedCount);
+
+        scanner.close();
+    }
+}
+
+```
+
+
+### Calculating an Average
+- Approach: combine accumulation and counting
+	- We start by initializing a total variable and a count variable to 0
+	- Each time we read an item, we add its value to the total variable and increment the count variable
+	- When we have no more items to read, we calculate the average by dividing the total by the count
+
+**Calculating an Average Pseudocode**
+```java
+set total to 0
+set count to 0
+read a number
+while ( number is not the sentinel value )
+{
+	add the number to total
+	add 1 to the count
+	read the next number
+}
+set average to total / count
+output the average
+```
+
