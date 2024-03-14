@@ -1,10 +1,10 @@
 # Mathematical Operation Selection
 in this example, it is required to develop a programme that takes two numbers and the operation and finds the result of applying the selected operation on the entered numbers
 1. Prepare your programme, 
-    a. import the necessary libraries, 
-    b. define the class
-    c. declare the necessary variables
-    d. initialise the variables (if needed)
+    - a. import the necessary libraries, 
+    - b. define the class
+    - c. declare the necessary variables
+    - d. initialise the variables (if needed)
 
 ```java
 import java.util.Scanner;
