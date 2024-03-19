@@ -13,9 +13,9 @@ public class Ex02
 
         // Print the element above the diagonal 
         System.out.print("Elements above the Diagonal\n");
-        for (int i = 0; i < 5; i++) 
+        for (int i = 0; i < array2D.length; i++) 
         {
-            for (int j = 0; j < 5; j++) 
+            for (int j = 0; j < array2D[i].length; j++) 
             {
                 if (i<j)
                 System.out.print(array2D[i][j] + "\t");
@@ -25,9 +25,9 @@ public class Ex02
 
         // Print the element on the diagonal 
         System.out.print("Elements on the Diagonal\n");
-        for (int i = 0; i < 5; i++) 
+        for (int i = 0; i < array2D.length; i++) 
         {
-            for (int j = 0; j < 5; j++) 
+            for (int j = 0; j < array2D[i].length; j++) 
             {
                 if (i==j)
                 System.out.print(array2D[i][j] + "\t");
@@ -36,9 +36,9 @@ public class Ex02
         }
         // Print the element below the diagonal 
         System.out.print("Elements below the Diagonal\n");
-        for (int i = 0; i < 5; i++) 
+        for (int i = 0; i < array2D.length; i++) 
         {
-            for (int j = 0; j < 5; j++) 
+            for (int j = 0; j < array2D[i].length; j++) 
             {
                 if (i>j)
                 System.out.print(array2D[i][j] + "\t");
